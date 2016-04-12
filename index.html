@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+<div style="text-align: center">
+    <p id="cpu_info"></p>
+    <p id="cpu_temp"></p>
+    <p id="mem_info"></p>
+    <!--<p id="cpu_usage"></p>-->
+    自动刷新时间
+    <select id="time">
+        <option value="1">1秒</option>
+        <option value="2" selected="selected">2秒</option>
+        <option value="3">3秒</option>
+        <option value="5">5秒</option>
+        <option value="10">10秒</option>
+    </select>
+    <br/>
+    <button id="refresh" class="btn btn-primary glyphicon glyphicon-refresh">立即刷新</button>
+    <br/>
+    <br/>
+    <div style="width: 1000px;margin: auto">
+        <div style="display: inline;float: left;">
+            <p>CPU温度折线图</p>
+            <canvas style="display: inline" id="cpu_temp_chart" width="500" height="400"></canvas>
+        </div>
+        <div style="display: inline;float: left;">
+            <p>内存占用率折线图</p>
+            <canvas style="display: inline" id="mem_info_chart" width="500" height="400"></canvas>
+        </div>
+    </div>
+</div>
+</body>
+</html>
